@@ -53,12 +53,12 @@
 		<h2>Task 1: Drawing Single-Color Triangles</h2>
 		For this task, we are trying to rasterize a triangle. The basic idea is that we need to find out if a pixel is actually part of the triangle. If so, we draw it using the rasterize point function to fill the pixel of the triangle. The first step is to actually find the bounding box because we only need to check the pixels confined to this area and see if the pixel is inside the triangle or not. Then we just loop through each pixel and try to check if it's inside the triangle. For this part we can use the barycentric method to see if the pixel is inside the triangle, and then fill the respective pixels. My algorithm is not worse than one that checks each sample with bounding box because this is exactly what I am doing right here, just going through pixels inside the bounding box. 
 
-		<p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
+		<p>Here is one screenshot of <b>Test4.svg</b> </p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
 			<table style="width: 100%; text-align: center; border-collapse: collapse;">
 			  <tr>
 				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
+				  <img src="task1-1.png" width="400px"/>
 				  <figcaption>Caption goes here.</figcaption>
 				</td>
 				<td style="text-align: center;">
