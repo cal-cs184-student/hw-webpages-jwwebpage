@@ -53,27 +53,27 @@
 		<h2>Task 1: Drawing Single-Color Triangles</h2>
 		For this task, we are trying to rasterize a triangle. The basic idea is that we need to find out if a pixel is actually part of the triangle. If so, we draw it using the rasterize point function to fill the pixel of the triangle. The first step is to actually find the bounding box because we only need to check the pixels confined to this area and see if the pixel is inside the triangle or not. Then we just loop through each pixel and try to check if it's inside the triangle. For this part we can use the barycentric method to see if the pixel is inside the triangle, and then fill the respective pixels. My algorithm is not worse than one that checks each sample with bounding box because this is exactly what I am doing right here, just going through pixels inside the bounding box. 
 
-		<p>Here is one screenshot of <b>Test4.svg</b> </p>
+		<p>Here are screenshots of <b>Test4.svg</b> for task 1 and 2.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
 			<table style="width: 100%; text-align: center; border-collapse: collapse;">
 			  <tr>
 				<td style="text-align: center;">
 				  <img src="task1-1.PNG" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
+				  <figcaption>The result of task 1.</figcaption>
 				</td>
 				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
+				  <img src="task2-1.png" width="400px"/>
+				  <figcaption>The result of task 2 with sample rate of 1.</figcaption>
 				</td>
 			  </tr>
 			  <tr>
 				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
+				  <img src="task2-2.png" width="400px"/>
+				  <figcaption>The result of task 2 with sample rate of 4.</figcaption>
 				</td>
 				<td style="text-align: center;">
-				  <img src="lion.jpg" width="400px"/>
-				  <figcaption>Caption goes here.</figcaption>
+				  <img src="task2-3.png" width="400px"/>
+				  <figcaption>The result of task 2 with sample rate of 16.</figcaption>
 				</td>
 			  </tr>
 			</table>
