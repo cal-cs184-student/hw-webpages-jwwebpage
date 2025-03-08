@@ -133,7 +133,24 @@
                 </table>
             </div>
             <h3>Part 4: Edge flip</h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            In this part we need to correctly flip the edge and make sure that all the mesh elements as well as their pointers are changed accordingly and they are also pointing to the correct element. There are halfedges, vertices, and faces connected to the edge, so we need to update all the elements correctly. To do this, we need to first check if the edge is a boundary edge or not. If it is a boundary edge, we cannot flip it. Otherwise, we can flip the edge and proceed with the process. Then we need to get the halfedges, vertices, and faces connected to the edge and try to update these elements, making sure that after the flip they still point to the correct element respectively. We use the setNeighbors function to update all the pointers, making sure that they are correct for each of the halfedges. One problem I faced while implementing this function is that it is really hard to keep track of the elements since it is quite confusing, so one debugging trick I used is to draw the picture of elements on paper and then figure out which elements is pointing to which element. Then I can check if my code is correct by comparing my drawing with the actual code. I encountered some error at first, when I flip the edge the face is not showing up anymore, and it turns out there are some issues with the setNeighbors functions since I messed up with the correct pointer parameters. The debug trick was helpful in solving this issue. Attached are screenshots showing before and after the edge flip. We can see that the edge is flipped and the other elements and halfedges are also updated if we navigate in the GUI.
+
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <table style="width: 100%; text-align: center; border-collapse: collapse;">
+                    <tr>
+                        <td style="text-align: center;">
+                            <img src="task4before.PNG" width="400px" />
+                            <figcaption>Before flipping edges.</figcaption>
+                        </td>
+                        <td style="text-align: center;">
+                            <img src="task4after.PNG" width="400px" />
+                            <figcaption>After flipping edges.</figcaption>
+                        </td>
+
+                    </tr>
+
+                </table>
+            </div>
 
             <h3>Part 5: Edge split</h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
